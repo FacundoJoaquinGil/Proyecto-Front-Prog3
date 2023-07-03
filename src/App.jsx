@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import { Pacientes, Login} from "./Constants"
+import { Pacientes, Login, EditarPaciente, AgregarPaciente} from "./Constants"
 
 function App() {
 

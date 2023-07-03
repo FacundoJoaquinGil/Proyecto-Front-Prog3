@@ -13,10 +13,7 @@ const Agregardentista = () => {
 //const [iduser, setIduser] = useState ()
   const [dentistas,setDentistas] = useState([])
 
-  const handleAgregar =()=>{
-    setDentistas([...dentistas,{nombre,apellido,dni,matricula,sexo,turno}])
-  }
- 
+
 
   return (
 

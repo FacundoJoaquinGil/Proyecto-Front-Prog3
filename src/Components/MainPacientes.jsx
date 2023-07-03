@@ -1,5 +1,6 @@
 
-import { AgregarPaciente, TablaPacientes } from '../Constants'
+import { Link } from 'react-router-dom'
+import {  TablaPacientes } from '../Constants'
 
 
 export const MainPacientes = () => {
@@ -12,9 +13,10 @@ export const MainPacientes = () => {
 
   return (
     <div>
-
+        <Link to="/pacientes/agregar">
+            <button>Agregar Paciente</button>
+        </Link>
         <h2>Pacientes</h2>
-            <AgregarPaciente />
             <TablaPacientes/>
     </div>
   )
