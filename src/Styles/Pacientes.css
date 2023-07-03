@@ -1,0 +1,7 @@
+.div_Panel{
+    display: flex;
+}
+.div_Panel>ul>li{
+    display: inline-block;
+    margin: 15px;
+}

@@ -1,0 +1,35 @@
+
+
+.contenedor_button1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px;
+    padding: 20px;
+
+    
+}
+
+.contenedor_button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.buton1{
+    margin: 50px;
+}
+
+.icono3{
+    width: 60%;
+}
+
+.h2_main_header{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+
