@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 
 
 export const AgregarPaciente = () => {
+
+  let navigate = useNavigate()
+
   const [nombre, setNombre] = useState("")
   const [apellido, setApellido] = useState("")
   const [dni, setDni] = useState(0)
@@ -14,10 +18,6 @@ export const AgregarPaciente = () => {
   const [edad, setEdad] = useState("")
   const [idHistorialClinico, setIdHistorialClinico] = useState(0)
   // const [pacientes, setPacientes] = useState([])
-
-
-
-
 
   const handleAgregar = () => {
     Axios.post("http://localhost:8000/pacientes/registrar",{
@@ -31,6 +31,7 @@ export const AgregarPaciente = () => {
       idHistorialClinico: idHistorialClinico
     }).then(()=>{
       alert("Paciente registrado.")
+      navigate('/pacientes',{ replace: true })
     })
   }
 
@@ -70,6 +71,7 @@ export const AgregarPaciente = () => {
         <Form.Group className="mb-3">
           <Form.Label>Sexo</Form.Label>
           <Form.Select onChange={(e) => setSexo(e.target.value)}>
+            <option selected disabled> Selecciona una opcion </option>
             <option value="Mujer"> Mujer </option>
             <option value="Hombre"> Hombre </option>
           </Form.Select>

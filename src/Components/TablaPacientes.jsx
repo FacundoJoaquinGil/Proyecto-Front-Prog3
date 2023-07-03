@@ -1,16 +1,29 @@
 import  Axios  from 'axios';
 import { useEffect, useState } from 'react'
 import Table from 'react-bootstrap/Table';
+import { Link } from 'react-router-dom';
 
-export const TablaPacientes = ({ btn }) => {
+export const TablaPacientes = () => {
   const [pacientes, setPacientes] = useState([])
 
-  useEffect(()=>{
-    const MostrarPacientes = () =>{
+  const handleEliminar = (id) =>{
+    const url = "http://localhost:8000/pacientes/eliminar/"
+  const eliminar =  Axios.delete(url+id)
+    if(eliminar){
       Axios.get("http://localhost:8000/pacientes").then((response) => {
         setPacientes(response.data)
       })
     }
+    MostrarPacientes();
+  }
+
+  const MostrarPacientes = () =>{
+    Axios.get("http://localhost:8000/pacientes").then((response) => {
+      setPacientes(response.data)
+    })
+  }
+
+  useEffect(()=>{
     MostrarPacientes();
   },[])
 
@@ -28,25 +41,31 @@ export const TablaPacientes = ({ btn }) => {
             <th>Fecha de Nacimiento</th>
             <th>Edad</th>
             <th>Numero Historial Clinico</th>
-            <th>Boton</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
           {
           pacientes.map((paciente)=>{
             return(
-          <tr className='' key="paciente.id">
+          <tr className='' key={paciente.id_Pacientes}>
             <td>{paciente.id_Pacientes}</td>
             <td>{paciente.nombre}</td>
             <td>{paciente.apellido}</td>
             <td>{paciente.dni}</td>
             <td>{paciente.sexo}</td>
             <td>{paciente.domicilio}</td>
-            <td>{paciente.fechaNacimiento}</td>
+            <td>{paciente.fechaNacimiento.slice(0,10)}</td>
             <td>{paciente.edad}</td>
             <td>{paciente.idHistorialClinico}</td>
             <td>
-              { btn && <button> {btn} </button>}
+                <Link to={`/pacientes/editar/${paciente.id_Pacientes}`}>
+                    <button>Editar</button>
+                </Link>
+            </td>
+            <td>
+              <button onClick={(()=>{handleEliminar(paciente.id_Pacientes)})}>Eliminar</button>
             </td>
           </tr>)
           })

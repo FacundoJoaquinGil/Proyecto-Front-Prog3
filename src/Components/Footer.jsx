@@ -4,7 +4,6 @@ import "../Styles/Footer.css"
 import {
   MDBFooter,
   MDBContainer,
-  
 } from 'mdb-react-ui-kit';
 
 const Footer = () => {
