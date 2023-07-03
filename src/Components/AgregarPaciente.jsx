@@ -2,6 +2,8 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Axios from "axios"
 
+
+
 export const AgregarPaciente = () => {
   const [nombre, setNombre] = useState("")
   const [apellido, setApellido] = useState("")
@@ -37,6 +39,8 @@ export const AgregarPaciente = () => {
   // }
   
   return (
+    
+
     <div className="container p-2">
       <>
         <Form.Group className="mb-3">
@@ -73,7 +77,9 @@ export const AgregarPaciente = () => {
             <Form.Label>Historial Clinico</Form.Label>
             <Form.Control placeholder="Historial Clinico" onChange={(e) => setIdHistorialClinico(e.target.value)}/>
           </Form.Group>
+          
           <button onClick={handleAgregar}>Agregar</button>
+          
         </Form.Group>
       </>
     </div>

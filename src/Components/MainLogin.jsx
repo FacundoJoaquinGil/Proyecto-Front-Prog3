@@ -13,7 +13,7 @@ const MainLogin = () => {
                 <input type="text" placeholder="ingrese su usuario"/>
                 <label htmlFor="password">Contraseña</label>
                 <input type="password" placeholder="ingrese su contraseña"/>
-                <Link to="/">
+                <Link to="/Home">
                 <input type="submit" value="Ingresar"/>
                 </Link>
             </form>

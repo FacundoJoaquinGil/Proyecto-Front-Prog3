@@ -8,14 +8,14 @@
 }
 
 .link{
-    font-weight: 550;
+    font-weight: 500;
     padding-right: 10px;
     color: white;
     text-decoration: none;
-    font-size: 25px;
-    
+    font-size: 21px;
     padding: 4px;
     margin: 5px;
+    border: 1.5px white solid;
 }
 
 
@@ -31,9 +31,11 @@
 }
 
 .h2_header{
-    margin-top: 30px;
+    margin-top: 15px;
     text-decoration: underline;
     color: white;
+    font-size: 25px;
+
 }
 
 

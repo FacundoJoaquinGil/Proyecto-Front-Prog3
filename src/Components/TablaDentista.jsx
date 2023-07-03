@@ -1,3 +1,4 @@
+import  Axios  from "axios";
 import { useEffect, useState } from "react"
 import Table from 'react-bootstrap/Table';
 
@@ -6,10 +7,11 @@ const TablaDentista = ({btn}) => {
 
   useEffect (()=>{
     const MostrarDentistas = ()=>{
-      setDentistas(Response.data)
+      Axios.get("http://localhost:8000/dentista").then((response)=>{
+        setDentistas(response.data)
+      })
     }
-    MostrarDentistas
-
+    MostrarDentistas();
   },[])
 
 

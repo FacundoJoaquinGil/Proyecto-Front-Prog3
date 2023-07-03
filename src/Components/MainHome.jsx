@@ -20,7 +20,7 @@ const MainHome = () => {
 
             <div className="contenedor_button1" >
             <Button className="buton1"  variant="primary">
-                    <Link to="/dentista">
+                    <Link to="/dentistas">
                     <img src={icono5} alt="" />
                     </Link>
                     <h4>Ir a Seccion Dentista</h4>
