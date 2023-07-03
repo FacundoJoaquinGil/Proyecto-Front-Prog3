@@ -4,6 +4,7 @@ import MainHome from "./Components/MainHome"
 import Dentista from "../src/Components/MainDentista"
 import MainDentista from "../src/Components/MainDentista"
 import Agregardentista from "./Components/Agregardentista"
+import EditarDentista from "./Components/EditarDentista"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route  path="/dentistas" element={<Dentista/>}/>
             <Route  path="/agregardentista" element={<Agregardentista/>}/>
             <Route  path="/maindentista" element={<MainDentista/>}/>
+            <Route  path="/editardentista/:id" element={<EditarDentista/>}/>
           
 
           </Routes>

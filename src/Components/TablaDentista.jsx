@@ -1,15 +1,34 @@
-import  Axios from "axios";
+
+import axios from "axios";
+import Axios from "axios";
 import { useEffect, useState } from "react"
 import Table from 'react-bootstrap/Table';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+
+
 
 const TablaDentista = () => {
-  const[dentistas,setDentistas] = useState([])
+  const[dentista,setDentista] = useState([])
 
-  useEffect (()=>{
-    const MostrarDentistas = ()=>{
-
-      setDentistas(Response.data)
+  const handleEliminar = (id) =>{
+    const url = "http://localhost:8000/dentista/eliminar/"
+  const eliminar =  Axios.delete(url+id)
+    if(eliminar){
+      Axios.get("http://localhost:8000/dentista").then((response) => {
+        setDentista(response.data)
+      })
     }
+    MostrarDentistas();
+  }
+
+  const MostrarDentistas =() =>{
+    axios.get("http://localhost:8000/dentista").then((response) => {
+      setDentista(response.data)
+    })
+  }
+
+  useEffect(()=>{
     MostrarDentistas();
   },[])
 
@@ -25,23 +44,30 @@ const TablaDentista = () => {
             <th>Sexo</th>
             <th>Turno</th>
             <th>N° Matricula</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
           {
-          dentistas.map((dentistas)=>{
+          dentista.map((dentista)=>{
             return(
-          <tr className='' key="Dentista.id">
-            <td>{dentistas.id_Dentista}</td>
-            <td>{dentistas.nombre}</td>
-            <td>{dentistas.apellido}</td>
-            <td>{dentistas.dni}</td>
-            <td>{dentistas.sexo}</td>
-            <td>{dentistas.turno}</td>
-            <td>{dentistas.matricula}</td>
+          <tr className='' key={dentista.id_Dentista}>
+            <td>{dentista.id_Dentista}</td>
+            <td>{dentista.nombre}</td>
+            <td>{dentista.apellido}</td>
+            <td>{dentista.dni}</td>
+            <td>{dentista.sexo}</td>
+            <td>{dentista.turno}</td>
+            <td>{dentista.matricula}</td>
             
             <td>
-              { btn && <button> {btn} </button>}
+            <Link to={`/editardentista/${dentista.id_Dentista}`}>
+            <Button variant="warning">Editar</Button>
+            </Link>
+            </td>
+            <td>
+              <Button variant="danger" onClick={(()=>{handleEliminar(dentista.id_Dentista)})}>Eliminar</Button>{' '}
             </td>
           </tr>)
           })

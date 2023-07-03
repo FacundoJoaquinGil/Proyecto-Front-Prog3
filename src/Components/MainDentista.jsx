@@ -11,10 +11,10 @@ const MainDentista = () => {
   return (
     <div>
           <Header/>
-          <h2>Dentista</h2>
           <Link to="/agregardentista">
           <Button variant="success">Agregar Dentista</Button>
           </Link>
+          <h2>Dentista</h2>
           <TablaDentista/>
           <Footer/> 
 

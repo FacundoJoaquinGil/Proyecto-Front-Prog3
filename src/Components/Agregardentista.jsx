@@ -8,14 +8,14 @@ import Axios from "axios"
 
 
 const Agregardentista = () => {
-  const [id_dentista,setId_dentista] = useState()
+  const [id_dentista] = useState()
   const [nombre,setNombre] = useState("")
   const [apellido,setApellido] = useState("")
   const [dni,setDni] = useState()
   const [matricula,setMatricula] = useState ()
   const [sexo, setSexo] = useState ("")
   const [turno, setTurno] = useState ("")
-  const [iduser, setIduser] = useState ()
+  const [iduser] = useState ()
  
 
   const handleAgregar =()=>{
