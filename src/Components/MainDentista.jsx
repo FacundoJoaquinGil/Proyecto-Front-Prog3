@@ -1,15 +1,17 @@
-import Agregardentista from "./Agregardentista"
-import TablaDentista from "./TablaDentista"
+import { Link } from "react-router-dom";
+import TablaDentista from "./TablaDentista";
+import { Button } from "react-bootstrap";
 
-
-const MainDentista = () => {
+export const MainDentista = () => {
   return (
     <div>
-          <Agregardentista/>
-          <TablaDentista/> 
-
+      <Link to="/agregardentista">
+        <Button variant="success">Agregar Dentista</Button>
+      </Link>
+      <h2>Dentista</h2>
+      <TablaDentista />
     </div>
-  )
-}
+  );
+};
 
-export default MainDentista
+export default MainDentista;

@@ -1,9 +1,8 @@
-import Footer from "../Components/Footer"
-import Header from "../Components/Header"
-import MainDentista from "../Components/MainDentista"
+import { Footer, Header, MainDentista } from "../Constants"
 
 
-const Dentista = () => {
+
+export const Dentista = () => {
   return (
     <div>
         <Header/>

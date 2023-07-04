@@ -6,7 +6,7 @@ import {
   MDBContainer,
 } from 'mdb-react-ui-kit';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="contenedor_footer">
 

@@ -2,7 +2,7 @@
 import MainHome from "../Components/MainHome"
 
 
-const Home = () => {
+export const Home = () => {
   return (
     <div>
       

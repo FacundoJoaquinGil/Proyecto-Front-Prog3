@@ -9,7 +9,7 @@ import {Link} from "react-router-dom"
 import Footer from "./Footer"
 
 
-const MainHome = () => {
+export const MainHome = () => {
   return (
     <div className="fondo"  style={{ backgroundImage: `url(${imagenFondo})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
                 <header> 
@@ -20,7 +20,7 @@ const MainHome = () => {
 
             <div className="contenedor_button1" >
             <Button className="buton1"  variant="primary">
-                    <Link to="/dentista">
+                    <Link to="/dentistas">
                     <img src={icono5} alt="" />
                     </Link>
                     <h4>Ir a Seccion Dentista</h4>

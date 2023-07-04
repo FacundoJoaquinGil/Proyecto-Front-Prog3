@@ -2,6 +2,8 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Axios from "axios"
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export const AgregarPaciente = () => {
 
@@ -15,7 +17,7 @@ export const AgregarPaciente = () => {
   const [fechaNacimiento, setFechaNacimiento] = useState("")
   const [edad, setEdad] = useState("")
   const [idHistorialClinico, setIdHistorialClinico] = useState(0)
-  // const [pacientes, setPacientes] = useState([])
+
 
   const handleAgregar = () => {
     Axios.post("http://localhost:8000/pacientes/registrar",{
@@ -33,13 +35,11 @@ export const AgregarPaciente = () => {
     })
   }
 
-  // const handleAgregar = () =>{
-  //   setPacientes([...pacientes,{nombre, apellido, dni, sexo, domicilio, fechaNacimiento, edad, idHistorial}])
-  // }
-  
   return (
-    <div className="container p-2">
-      <>
+
+    <>
+    <Header/>
+      <div className="container p-2">
         <Form.Group className="mb-3">
           <Form.Label>Nombre</Form.Label>
           <Form.Control placeholder="Nombre" onChange={(e) => setNombre(e.target.value)}/>
@@ -77,8 +77,9 @@ export const AgregarPaciente = () => {
           </Form.Group>
           <button onClick={handleAgregar}>Agregar</button>
         </Form.Group>
-      </>
-    </div>
+      </div>
+      <Footer/>
+    </>
   );
 };
 

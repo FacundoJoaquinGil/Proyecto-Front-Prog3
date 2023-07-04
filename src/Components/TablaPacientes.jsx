@@ -8,7 +8,7 @@ export const TablaPacientes = () => {
 
   const handleEliminar = (id) =>{
     const url = "http://localhost:8000/pacientes/eliminar/"
-  const eliminar =  Axios.delete(url+id)
+    const eliminar =  Axios.delete(url+id)
     if(eliminar){
       Axios.get("http://localhost:8000/pacientes").then((response) => {
         setPacientes(response.data)
