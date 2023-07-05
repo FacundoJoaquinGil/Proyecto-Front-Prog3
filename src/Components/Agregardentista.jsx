@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Axios from "axios"
 
 
@@ -17,7 +17,6 @@ export const AgregarDentista = () => {
   const [matricula,setMatricula] = useState (0)
   const [sexo, setSexo] = useState ("")
   const [turno, setTurno] = useState ("")
-  const [idUsuario, setIdUsuario] = useState (0)
  
 
   const handleAgregar =()=>{
@@ -29,7 +28,6 @@ export const AgregarDentista = () => {
       matricula: matricula,
       sexo: sexo,
       turno:turno,
-      iduser: idUsuario
 
     }).then(()=>{
       alert("Dentista agregado")
@@ -76,11 +74,7 @@ export const AgregarDentista = () => {
               
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Id Usuario</Form.Label>
-              <Form.Control placeholder="Id Usuario" onChange={(e) => setIdUsuario(e.target.value)}/>
-            </Form.Group>
-            <Form.Group className="mb-3">
-
+              
             <Button variant="success" onClick={handleAgregar}>Agregar</Button>
 
             </Form.Group>

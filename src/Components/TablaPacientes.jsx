@@ -1,5 +1,6 @@
 import  Axios  from 'axios';
 import { useEffect, useState } from 'react'
+import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
 
@@ -61,11 +62,11 @@ export const TablaPacientes = () => {
             <td>{paciente.idHistorialClinico}</td>
             <td>
                 <Link to={`/pacientes/editar/${paciente.id_Pacientes}`}>
-                    <button>Editar</button>
+                    <Button variant="warning" >Editar</Button>
                 </Link>
             </td>
             <td>
-              <button onClick={(()=>{handleEliminar(paciente.id_Pacientes)})}>Eliminar</button>
+              <Button  variant="danger" onClick={(()=>{handleEliminar(paciente.id_Pacientes)})}>Eliminar</Button>
             </td>
           </tr>)
           })

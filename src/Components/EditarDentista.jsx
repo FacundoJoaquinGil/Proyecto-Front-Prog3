@@ -54,7 +54,7 @@ export const EditarDentista = () => {
   
   
     return (
-      <div>
+      <div className='container'>
             <Form.Group className="mb-3">
             <Form.Label>Nombre</Form.Label>
             <Form.Control value={nombre} placeholder="Nombre" onChange={(e) => setNombre(e.target.value)}/>

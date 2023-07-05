@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export const EditarPaciente = () => {
 
-    let {id} = useParams()
+    let  {id} = useParams()
     let navigate = useNavigate()
 
     const [nombre, setNombre] = useState("")
@@ -32,6 +32,7 @@ export const EditarPaciente = () => {
         })
       }
 
+
     const handleEditar = () => {
         const url = "http://localhost:8000/pacientes/editar/"
         Axios.put(url+id,{
@@ -47,7 +48,6 @@ export const EditarPaciente = () => {
           alert("Paciente registrado.")
           navigate('/pacientes',{ replace: true })
         })
-        alert('no entro capo')
       }
 
         useEffect(() => {
@@ -55,7 +55,7 @@ export const EditarPaciente = () => {
         }, [])
 
   return (
-    <div>
+    <div className='container'>
              <Form.Group className="mb-3">
           <Form.Label>Nombre</Form.Label>
           <Form.Control value={nombre} placeholder="Nombre" onChange={(e) => setNombre(e.target.value)}/>

@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
+
+
 export const AgregarPaciente = () => {
 
   let navigate = useNavigate()
@@ -75,7 +77,9 @@ export const AgregarPaciente = () => {
             <Form.Label>Historial Clinico</Form.Label>
             <Form.Control placeholder="Historial Clinico" onChange={(e) => setIdHistorialClinico(e.target.value)}/>
           </Form.Group>
+          
           <button onClick={handleAgregar}>Agregar</button>
+          
         </Form.Group>
       </div>
       <Footer/>

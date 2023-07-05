@@ -20,8 +20,8 @@ export const Header = () => {
                                      <Link to="/Home" className='link'>Home</Link>
                                        <Link to="/dentistas" className='link'>Dentista</Link>
                                        <Link to="/pacientes" className='link'>Paciente</Link>
-                                       <Link to="/MainHistorialClinico" className='link'>Historial clinico</Link>
-                                       <Link to="/MainAgendaYTurno" className='link'>Agenda y turnos</Link>
+                                       <Link to="/historialClinico" className='link'>Historial clinico</Link>
+                                       <Link to="/turno" className='link'>Turnos</Link>
                                       
                       </nav>
                       
