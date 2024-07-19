@@ -1,41 +1,29 @@
 .header_prinpipal{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 100px;
     padding: 10px;
-    justify-content: space-between;
-   background-color: black;
+    background-color: rgba(0, 0, 0, 0.494);
     
 }
 
 .link{
-    font-weight: 500;
-    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 20px;
     color: white;
-    text-decoration: none;
-    font-size: 21px;
-    padding: 4px;
     margin: 5px;
-    border: 1.5px white solid;
+}
+.link:hover{
+    color: rgb(0, 183, 255);
 }
 
 
-
-.Logo_header{
-    display: flex;
-}
-
-.img_logo{
-    height: 90px;
-    margin-right: 13px;
-    border-radius: 200px;
-}
-
-.h2_header{
-    margin-top: 15px;
-    text-decoration: underline;
-    color: white;
-    font-size: 25px;
-
+.img_logo{ 
+    width: 80px;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 

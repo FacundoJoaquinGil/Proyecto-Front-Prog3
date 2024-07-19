@@ -1,27 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
-import { Footer, Header, TablaHistorial } from '../Constants'
-
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { Footer, Header, TablaHistorial } from "../Constants";
+import "../Styles/Historial.css";
 
 export const HistorialClinico = () => {
   return (
-        <>
-        <Header/>
-        
-          <div>
-        
-        <Link to="/agregarhistorial">
-        <Button variant="success">Agregar Historial</Button>
-        </Link>
-        <h2>Historial Clinico</h2>
-        <TablaHistorial/>
-        
-          </div> 
-
-        <Footer/>
-        </>
-  )
-}
+    <>
+      <div className="contenedor-historial">
+        <Header />
+        <div>
+          <Link to="/agregarhistorial">
+            <button className="boton-agregar">Agregar Historial</button>
+          </Link>
+          <h2>Historial Clinico</h2>
+          <TablaHistorial />
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+};
 export default HistorialClinico;

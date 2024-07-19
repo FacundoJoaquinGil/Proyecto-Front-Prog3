@@ -1,6 +1,5 @@
 import "../Styles/Footer.css"
 
-
 import {
   MDBFooter,
   MDBContainer,
@@ -12,13 +11,13 @@ export const Footer = () => {
 
       <div className="footer">
 
-              <MDBFooter className='bg-dark text-center text-white'>
-        <MDBContainer className='p-6 pb-0'>
-          <section className='mb-4'>
+        <MDBFooter className='text-center text-white'>
+        <MDBContainer className=' pb-0'>
+          <section className=''>
           </section>
         </MDBContainer>
 
-          <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          <div className='text-center p-3'>
             © 2023 Copyright: <br />
             <a className='text-white'>
             Matias Bordenave , Agustin Tapie , Joaquin Gil

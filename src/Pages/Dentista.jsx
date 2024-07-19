@@ -1,21 +1,19 @@
-import { Footer, Header, TablaDentista } from "../Constants"
+import { Footer, Header, TablaDentista } from "../Constants";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
-
-
+import "../Styles/Dentista.css";
 
 export const Dentista = () => {
   return (
-    <div>
-        <Header/>
-        <Link to="/agregardentista">
-        <Button variant="success">Agregar Dentista</Button>
+    <div className="contenedor-dentista">
+      <Header />
+      <Link to="/agregardentista">
+        <button className="boton-agregar"> Agregar Dentista</button>
       </Link>
       <h2>Dentista</h2>
       <TablaDentista />
-        <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Dentista
+export default Dentista;

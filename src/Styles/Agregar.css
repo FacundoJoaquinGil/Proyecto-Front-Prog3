@@ -1,0 +1,15 @@
+.contenedor-ad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00f2ffcb, #00aaff);
+}
+
+#container-ad{
+   background-color: rgba(255, 255, 255, 0.492);
+   padding: 20px;
+   border-radius: 20px;
+   max-width: 500px;
+}

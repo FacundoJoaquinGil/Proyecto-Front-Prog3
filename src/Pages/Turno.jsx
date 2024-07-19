@@ -1,24 +1,19 @@
-
-
-import Button from 'react-bootstrap/Button';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import { Footer, Header, TablaTurno } from "../Constants";
-
-
+import "../Styles/Turnos.css";
 
 export const Turno = () => {
   return (
-    <div>
-          <Header/>
-          <Link to="/agregarturno">
-          <Button variant="success">Agregar Turno</Button>
-          </Link>
-          <h2>Turno</h2>
-          <TablaTurno/>
-          <Footer/> 
-
+    <div className="contenedor-turno">
+      <Header />
+      <Link to="/agregarturno">
+        <button className="boton-agregar">Agregar Turno</button>
+      </Link>
+      <h2>Turno</h2>
+      <TablaTurno />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Turno
+export default Turno;

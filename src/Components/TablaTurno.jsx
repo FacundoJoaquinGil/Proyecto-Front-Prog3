@@ -35,7 +35,7 @@ export const TablaTurno = () => {
         <Table striped bordered hover variant="dark" className=''>
         <thead className=''>
           <tr className=''>
-            <th>Id Paciente</th>
+            <th>ID Paciente</th>
             <th>Fecha Del Turno</th>
             <th>Numero De Turno</th>
             <th>Editar</th>
