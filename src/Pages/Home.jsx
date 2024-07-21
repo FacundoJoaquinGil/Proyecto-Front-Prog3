@@ -15,9 +15,7 @@ export const Home = () => {
           <button className="boton-login">Iniciar Sesión</button>
         </Link>
         <header>
-          <h2 className="h2_main_header">Panel de control</h2>
-          <br />
-          <h3 className="h2_main_header">Consultorio Dentista</h3>
+          <h3 className="h2_main_header">"Centro de Salud Dental"</h3>
           <div className="contenedor-boton-login"></div>
         </header>
 
