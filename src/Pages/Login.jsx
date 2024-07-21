@@ -2,6 +2,7 @@ import axios from "axios";
 import "../Styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 export const Login = () => {
   let navigate = useNavigate();
@@ -28,7 +29,7 @@ export const Login = () => {
       <div className="body">
         <div className="login-box">
           <img
-            src="https://media.istockphoto.com/id/1290057260/es/vector/dientes-coraz%C3%B3n-dentro-icono-ilustraci%C3%B3n-de-stock-indonesia-logotipo-salud-dental-dentista.jpg?s=612x612&w=0&k=20&c=0FwVFhWHHrpnv90zIOCUNMirqYWMB14uLOrEbTXiXLY="
+            src={logo}
             alt=""
             className="avatar"
           />
@@ -51,6 +52,9 @@ export const Login = () => {
             </Link>
             <Link to="/registrarLogin">
               <button id="registrarse-boton">Registrarse</button>
+            </Link>
+            <Link to="/">
+              <button id="volver-boton">volver</button>
             </Link>
           </form>
         </div>

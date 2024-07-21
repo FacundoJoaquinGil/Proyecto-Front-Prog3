@@ -2,6 +2,7 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 import Axios from "axios";
 import "../Styles/Agregar.css";
 
@@ -79,9 +80,14 @@ export const AgregarDentista = () => {
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Button variant="success" onClick={handleAgregar}>
+          <Button variant="success fw-bold" onClick={handleAgregar}>
             Agregar
           </Button>
+          <Link to="/dentistas" className="link-button">
+          <Button variant="btn btn-primary m-2 fw-bold">
+            volver
+          </Button>
+          </Link>
         </Form.Group>
       </div>
     </div>

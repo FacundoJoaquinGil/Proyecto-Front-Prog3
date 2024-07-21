@@ -1,17 +1,17 @@
-.contenedor-historial{
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('https://www.portalgarrahan.org.ar/wp-content/uploads/2021/12/little-beautiful-girl-at-the-dentist-looking-and-smiling-scaled.jpeg') no-repeat center center / cover;
+.contenedor-historial {
+
+  text-align: center;
+
 }
-.contenedor-historial h2{
-    padding: 20px;
+
+.contenedor-historial h2 {
+  padding: 20px;
   color: white;
   font-weight: bold;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.572);
 }
 
-.boton-agregar{
+.boton-agregar {
   border-radius: 50px;
   background-color: #28a745;
   color: white;
@@ -22,7 +22,7 @@
   transition: transform 0.3s ease;
 }
 
-.boton-agregar:hover{
-  background-color: #1e7e34; 
-  transform: scale(1.1); 
+.boton-agregar:hover {
+  background-color: #1e7e34;
+  transform: scale(1.1);
 }

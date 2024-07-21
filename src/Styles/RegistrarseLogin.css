@@ -41,16 +41,3 @@
   }
   
   
-  .register-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-button:hover {
-    background-color: #026daf; 
-  }

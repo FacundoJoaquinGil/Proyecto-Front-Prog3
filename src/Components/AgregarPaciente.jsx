@@ -4,6 +4,7 @@ import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "../Styles/Agregar.css";
+import { Link } from "react-router-dom"
 
 export const AgregarPaciente = () => {
   let navigate = useNavigate();
@@ -100,9 +101,12 @@ export const AgregarPaciente = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Button variant="success" onClick={handleAgregar}>
+              <Button variant="success fw-bold" onClick={handleAgregar}>
                 Agregar
               </Button>
+              <Link to="/pacientes" className="link-button">
+                <Button variant="btn btn-primary m-2 fw-bold">volver</Button>
+              </Link>
             </Form.Group>
           </Form.Group>
         </div>

@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom"
 
 export const AgregarHistorial = () => {
   let navigate = useNavigate();
@@ -51,9 +52,14 @@ export const AgregarHistorial = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Button variant="success" onClick={handleAgregar}>
+          <Button variant="success fw-bold" onClick={handleAgregar}>
             Agregar
           </Button>
+          <Link to="/historialclinico" className="link-button">
+          <Button variant="btn btn-primary m-2 fw-bold">
+            volver
+          </Button>
+          </Link>
         </Form.Group>
       </div>
     </div>

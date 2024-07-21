@@ -9,7 +9,7 @@
 
 .login-box {
   width: 320px;
-  height: 420px;
+  height: 470px;
   background: #f0f4f7;
   color: #2c3e50;
   top: 50%;
@@ -69,7 +69,7 @@
   border: none;
   outline: none;
   height: 40px;
-  background: #3498db;
+  background: rgb(0, 183, 255);
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
@@ -102,10 +102,34 @@
   border-radius: 20px;
   width: 100%;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #registrarse-boton:hover {
   cursor: pointer;
   background: #27ae60;
+  color: #fff;
+}
+
+#volver-boton {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #333333;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+}
+
+#volver-boton:hover {
+  color: black !important;
+  border: 1px solid black;
+  cursor: pointer;
+  background: #ffffff00;
   color: #fff;
 }

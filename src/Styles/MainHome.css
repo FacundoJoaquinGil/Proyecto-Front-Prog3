@@ -1,12 +1,33 @@
-.fondo {
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://www.portalgarrahan.org.ar/wp-content/uploads/2021/12/little-beautiful-girl-at-the-dentist-looking-and-smiling-scaled.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;  
+}
+
+.contenedor-home{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('https://www.portalgarrahan.org.ar/wp-content/uploads/2021/12/little-beautiful-girl-at-the-dentist-looking-and-smiling-scaled.jpeg') no-repeat center center / cover;
+  text-align: center;  
+}
+
+.contenedor-login{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.boton-login{
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: bold;
+  
+}
+
+.boton-login:hover{
+  background-color: #1e7e34;
 }
 
 header {
@@ -30,7 +51,7 @@ header {
 }
 
 .buton1 {
-  background-color: #007bff;
+  background-color: rgb(0, 183, 255);
   border: none;
   border-radius: 8px;
   padding: 1.5rem;
@@ -45,7 +66,7 @@ header {
 }
 
 .buton1:hover {
-  background-color: #0056b3;
+  background-color: rgb(2, 134, 186);
   /* Darker blue on hover */
 }
 
