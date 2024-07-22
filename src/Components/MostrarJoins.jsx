@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Footer, Header } from '../Constants'
-import { Button, Table } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+
 
 export const MostrarJoins = () => {
     const [array, setArray] = useState([])
