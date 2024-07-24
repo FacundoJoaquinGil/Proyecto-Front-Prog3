@@ -4,7 +4,7 @@ import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "../Styles/Agregar.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const AgregarPaciente = () => {
   let navigate = useNavigate();
@@ -12,7 +12,7 @@ export const AgregarPaciente = () => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [dni, setDni] = useState(0);
-  const [sexo, setSexo] = useState("");
+  const [sexo, setSexo] = useState(""); // Inicialmente vacío
   const [domicilio, setDomicilio] = useState("");
   const [fechaNacimiento, setFechaNacimiento] = useState("");
   const [edad, setEdad] = useState("");
@@ -84,30 +84,28 @@ export const AgregarPaciente = () => {
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Sexo</Form.Label>
-            <Form.Select onChange={(e) => setSexo(e.target.value)}>
-              <option selected disabled>
-                {" "}
-                Selecciona una opcion{" "}
+            <Form.Select value={sexo} onChange={(e) => setSexo(e.target.value)}>
+              <option value="" disabled>
+                Selecciona una opcion
               </option>
-              <option value="Mujer"> Mujer </option>
-              <option value="Hombre"> Hombre </option>
+              <option value="Mujer">Mujer</option>
+              <option value="Hombre">Hombre</option>
             </Form.Select>
-            <Form.Group className="mb-3">
-              <Form.Label>Historial Clinico</Form.Label>
-              <Form.Control
-                placeholder="Historial Clinico"
-                onChange={(e) => setIdHistorialClinico(e.target.value)}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Button variant="success fw-bold" onClick={handleAgregar}>
-                Agregar
-              </Button>
-              <Link to="/pacientes" className="link-button">
-                <Button variant="btn btn-primary m-2 fw-bold">volver</Button>
-              </Link>
-            </Form.Group>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Historial Clinico</Form.Label>
+            <Form.Control
+              placeholder="Historial Clinico"
+              onChange={(e) => setIdHistorialClinico(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Button variant="success fw-bold" onClick={handleAgregar}>
+              Agregar
+            </Button>
+            <Link to="/pacientes" className="link-button">
+              <Button variant="btn btn-primary m-2 fw-bold">Volver</Button>
+            </Link>
           </Form.Group>
         </div>
       </div>
