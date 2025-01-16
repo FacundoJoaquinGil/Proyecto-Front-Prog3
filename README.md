@@ -20,4 +20,4 @@
 
 <h4>Sitio Web 💻</h4>
 
-<a href="https://consultorio-dentista.onrender.com/" terget="_blank">Miralo Haciendo Click Aqui!</a>
+<a href="https://web-dentista-simple.vercel.app" terget="_blank">Miralo Haciendo Click Aqui!</a>
